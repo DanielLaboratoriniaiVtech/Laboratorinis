@@ -2,7 +2,11 @@
 <!DOCTYPE html>
     <html lang="lt">
         <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="assets\style.css">
+            <link rel="stylesheet" type="text/css" media="print" href="assets/print.css">
             <meta charset="UTF-8">
             <title>1.2 laboras</title>
         </head>
@@ -10,7 +14,7 @@
             <header>
                 <div class="container">
                     <div class="menu flex-container">
-                        <p><a href="">Home</a></p>
+                        <p><a href="#pradinis">Home</a></p>
                         <p><a href="">About</a></p>
                         <p><a href="">Resume</a></p>
                         <p><a href="">Services</a></p>
@@ -20,7 +24,7 @@
                     </div>
                 </div>
             </header>
-            <div class="pradinis">
+            <div class="pradinis" id="pradinis">
                 <div class="menu-text flex-container">
                     <div class="teksto flex-container">
                         <h1 class="first-text">Daniel Petruskevic</h1>
@@ -29,32 +33,23 @@
                 </div>
                 <div class="bg">
                     <div class="image-filter"></div>
-                    <img src="assets/image/nicholas-green-nPz8akkUmDI-unsplash.jpg" alt="bcimg">
+                    <div class="nuotrauka"></div>
                 </div>
             </div>
-            <div class="About">
+            <div class="resume">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium nulla eos similique est eaque distinctio corrupti sunt labore repudiandae qui.</p>
+                <button class="print" onclick="window.print();return false;" />Printtt</button>
+            </div>
+            <div class="Aboutme flex-container">
+                
+                <div class="about header flex-container">
+                    <h1>
+                        About me
+                    </h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, nobis pariatur omnis blanditiis tempora corrupti non at, architecto incidunt beatae magnam mollitia totam maxime! Dolor, odio necessitatibus numquam praesentium, eligendi adipisci delectus molestias quibusdam sequi ducimus sunt unde? Perferendis at corporis possimus temporibus accusamus a earum, aliquam molestias cupiditate obcaecati?</p>
+                </div>
                 <div class="about-f flex-container">
-                    <h2>Apie</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, alias.</p>
                 </div>
-            </div>
-            <div class="Resume">
-                <div class="Resume-f flex-container">
-                    <h2>Resume</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, alias.</p>
-                </div>
-                <div class="Portfolio">
-                    <div class="portfolio-f flex-container">
-                        <h2>Portfolio</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, alias.</p>
-                        <video width="320" height="240" controls><source src="/assets/video/ugnius.mp4" type=video/mp4></video>
-                        <iframe src="https://www.youtube.com/watch?v=TGh2NpCIDlc" title="W3Schools Free Online Web Tutorials"></iframe>
-                        <audio controls>
-                            <source src="horse.ogg" type="audio/ogg">
-                            <source src="/assets/audio/epic-hybrid-logo-157092.mp3 " type=audio/mpeg>
-                          Your browser does not support the audio element.
-                          </audio>
-                    </div>
             </div>
         </body>
     </html>
