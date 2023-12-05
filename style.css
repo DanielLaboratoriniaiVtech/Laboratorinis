@@ -49,6 +49,7 @@ header>.container>.menu.flex-container>p>a{
 
 header>.container>.menu.flex-container>p>a:hover{
     color: yellow;
+    transition: 0.3s;
 }
 
 
@@ -117,8 +118,149 @@ header>.container>.menu.flex-container>p>a:hover{
 
 
 
-.about.header.flex-container{
-    align-items: center;
-    flex-direction: row;
+footer>.bg2>.nuotrauka2{
+    background-image: url(/assets/image/footer.jpg);
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
 }
 
+.last-page.flex-container{
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.last-page>p{
+    margin-bottom: 40px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+.last-page>h1{
+    margin: 80px;
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.socialmedia>a{
+    color: white;
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 4px;
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid yellow;
+    border-radius: 12px;
+    background: yellow;
+}
+
+.socialmedia>a:hover{
+    background: orange;
+    border: 1px solid orange;
+    transition: 0.3s;
+}
+
+.socialmedia>a>svg{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.socialmedia{
+    margin-bottom: 40px;
+}
+
+footer>.nuotrauka2>.filter{
+        z-index: 0;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        background: #000;
+        opacity: 0.6;
+}
+
+.resume.flex-container{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: gainsboro;
+}
+
+.resume.flex-container>img{
+    width: 25%;
+    height: auto;
+}
+
+.resume.flex-container>h1{
+    margin: 25px 0;
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.resume.flex-container>p{
+    margin-bottom: 25px;
+    color: black;
+    font-family: "Raleway", sans-serif;
+}
+
+.resume.flex-container>button{
+    border-radius: 10%;
+    padding: 10px;
+    margin: 10px 0 25px;
+    border: 1px solid orange;
+    background-color: orange;
+    color: black;
+    font-family: "Raleway", sans-serif;
+}
+
+.resume.flex-container>button:hover{
+    border-radius: 10%;
+    border: 1px solid orangered;
+    background-color: orangered;
+    color: black;
+    transition: 0.3s;
+    font-family: "Raleway", sans-serif;
+}
+
+.about.flex-container{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about.flex-container>img{
+    width: 25%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.about.flex-container>h1{
+    margin: 25px 0;
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.about.flex-container>p{
+    margin-bottom: 25px;
+    color: black;
+    font-family: "Raleway", sans-serif;
+}
+
+#header {
+    transition: background-color 0.5s ease; /* Add a smooth transition effect */
+  }
