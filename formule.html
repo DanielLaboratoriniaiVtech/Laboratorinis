@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MathJax Formula</title>
+      <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+    </head>
+    <body>
+
+      \[ \int_D (\Delta \cdot F) \, dV = \int_{\nabla D} (F \cdot \mathbf{n}) \, dS \]
+
+      <div id="loader">
+        <svg height="80" width="160" viewBox="-20 -20 240 240">
+          <path class="ring left" d="M100,0 a100,100 0 0 1 0,200 a100,100 0 0 1 0,-200,0" fill="none" />
+          <path class="ring right" d="M100,0 a100,100 0 0 1 0,200 a100,100 0 0 1 0,-200,0" />
+        </svg>
+        <div id = "clock" onload="currentTime()"></div>
+      </div>
+    </body>
+</html>
+
+<script>
+  function currentTime() {
+    let date = new Date(); 
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+    let session = "AM";
+  
+      
+    if(hh > 12){
+        session = "PM";
+     }
+  
+     hh = (hh < 10) ? "0" + hh : hh;
+     mm = (mm < 10) ? "0" + mm : mm;
+     ss = (ss < 10) ? "0" + ss : ss;
+      
+     let time = hh + ":" + mm + ":" + ss + " " + session;
+  
+    document.getElementById("clock").innerText = time; 
+    let t = setTimeout(function(){ currentTime() }, 1000); 
+  
+  }
+  
+  currentTime();
+</script>
