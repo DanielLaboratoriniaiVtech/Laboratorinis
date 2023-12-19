@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+  }
+
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    
+  }
+
+  button {
+    background-color: rgb(10, 92, 107);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #4583a0b9;
+  }
+
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* Papildomi stiliai pridėti pagal vidurkio spalvą */
+  #result.red {
+    color: red;
+  }
+
+  #result.orange {
+    color: orange;
+  }
+
+  #result.green {
+    color: green;
+  }

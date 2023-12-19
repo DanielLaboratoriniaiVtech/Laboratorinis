@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <link rel="stylesheet" href="./css.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Kontaktų Forma</title>
+    </head>
+    <body>
+      <form id="contactForm">
+        <label for="name">Vardas:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="surname">Pavardė:</label>
+        <input type="text" id="surname" required><br>
+
+        <label for="email">El. paštas:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="phone">Telefono numeris:</label>
+        <input type="tel" id="phone" required><br>
+
+        <label for="addressStreet">Adreso gatvė:</label>
+        <input type="text" id="addressStreet" required><br>
+
+        <label for="addressCity">Adreso miestas:</label>
+        <input type="text" id="addressCity" required><br>
+
+        <label for="additional1">Papildomas požymis 1 (skaičius):</label>
+        <input type="number" id="additional1" required><br>
+
+        <label for="additional2">Papildomas požymis 2 (skaičius):</label>
+        <input type="number" id="additional2" required><br>
+
+        <label for="additional3">Papildomas požymis 3 (skaičius):</label>
+        <input type="number" id="additional3" required><br>
+
+        <label for="additional4">Papildomas požymis 4 (skaičius):</label>
+        <input type="number" id="additional4" required><br>
+
+        <label for="additional5">Papildomas požymis 5 (skaičius):</label>
+        <input type="number" id="additional5" required><br>
+
+        <button type="button" onclick="saveData()">Išsaugoti duomenis</button>
+      </form>
+
+      <div id="result"></div>
+    </body>
+</html>
+
+
+<script>
+  function validateEmail(email) {
+var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return emailRegex.test(email);
+}
+
+function validatePhone(phone) {
+var phoneRegex = /^\d{10}$/;
+return phoneRegex.test(phone);
+}
+
+function validateAddress(address) {
+return address.trim() !== '';
+}
+
+function saveData() {
+var contactData = {
+  name: document.getElementById('name').value,
+  surname: document.getElementById('surname').value,
+  email: document.getElementById('email').value,
+  phone: document.getElementById('phone').value,
+  address: document.getElementById('addressStreet').value + ', ' + document.getElementById('addressCity').value,
+  additional1: parseFloat(document.getElementById('additional1').value),
+  additional2: parseFloat(document.getElementById('additional2').value),
+  additional3: parseFloat(document.getElementById('additional3').value),
+  additional4: parseFloat(document.getElementById('additional4').value),
+  additional5: parseFloat(document.getElementById('additional5').value),
+};
+
+console.log(contactData);
+
+for (var key in contactData) {
+  console.log(key + ': ' + contactData[key]);
+}
+
+if (!validateEmail(contactData.email)) {
+  alert('Neteisingas el. pašto adresas');
+  return;
+}
+
+if (!validatePhone(contactData.phone)) {
+  alert('Neteisingas telefono numeris');
+  return;
+}
+
+if (!validateAddress(contactData.address)) {
+  alert('Neteisingas adresas');
+  return;
+}
+
+var avg = (contactData.additional1 + contactData.additional2 + contactData.additional3 + contactData.additional4 + contactData.additional5) / 5;
+var resultElement = document.getElementById('result');
+resultElement.innerHTML = 'Vardas Pavardė (' + contactData.email + '): ' + avg.toFixed(2);
+
+var textColor = avg < 5 ? 'red' : avg < 7.5 ? 'orange' : 'green';
+resultElement.style.color = textColor;
+}
+</script>
